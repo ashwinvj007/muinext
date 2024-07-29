@@ -46,18 +46,7 @@ const Header: React.FC = () => {
                             <img src="/images/logo.jpg" alt="Logo" style={{ height: 60, cursor: 'pointer' }} />
                         </Link>
                     </Typography>
-                    <Box sx={{ display: 'flex', gap: 2 }}>
-                        <Link href="/login" passHref>
-                            <Button variant="contained" color="primary">
-                                Log In
-                            </Button>
-                        </Link>
-                        <Link href="/register" passHref>
-                            <Button variant="contained" color="primary">
-                                Register
-                            </Button>
-                        </Link>
-                    </Box>
+                    
                 </Toolbar>
             </AppBar>
             <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>

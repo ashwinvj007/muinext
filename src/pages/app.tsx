@@ -1,10 +1,11 @@
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
+// import LoginPage from './login';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ }) {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      
     </ThemeProvider>
   );
 }

@@ -4,7 +4,7 @@ import {
   FormControlLabel, Grid, TextField
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
-import NextLink from 'next/link';
+import RegisterPage from './RegisterForm';
 import Link from 'next/link';
 
 
@@ -13,8 +13,9 @@ const SignInForm: React.FC = () => {
   const router = useRouter(); // Initialize useRouter
 
   const handleSignUpClick = () => {
-    const router = useRouter();
-    router.push('/home'); // Replace with your actual route
+    router.push('localhost:3000/RegisterPage'); // Replace with your actual route
+
+    
   };
   return (
     <Container component="main" maxWidth="xs">
@@ -61,6 +62,7 @@ const SignInForm: React.FC = () => {
             type="submit"
             fullWidth
             variant="contained"
+            onClick={handleSignUpClick}
             sx={{ mt: 3, mb: 2 }}
           >
             Sign In

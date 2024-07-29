@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import RegisterForm from '../components/RegisterForm';
 
-const HomePage: React.FC = () => {
+const RegisterPage: React.FC = () => {
   return (
     <div>
       <Header />
@@ -14,4 +14,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default RegisterPage;
