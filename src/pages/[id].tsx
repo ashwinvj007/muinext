@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 
 const RegisterPage: React.FC = () => {
   const router = useRouter();
-  const { id } = router.query;
+  const { id } = router.query; // Get ID from URL
   const [initialValues, setInitialValues] = useState({
     name: '',
     email: '',
@@ -27,12 +27,12 @@ const RegisterPage: React.FC = () => {
       fetch(`http://localhost:3001/auth/register/${id}`)
         .then(response => response.json())
         .then(data => {
-          setInitialValues(data);
-          setIsUpdate(true);
+          setInitialValues(data); // Populate form with data
+          setIsUpdate(true); // Indicate that we are in update mode
         })
         .catch(error => console.error('Failed to fetch user data:', error));
     }
-  }, [id]);
+  }, [id]); // Dependency array to refetch data when ID changes
 
   // Define Yup schema for form validation
   const validationSchema = Yup.object({
